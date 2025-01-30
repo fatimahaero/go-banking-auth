@@ -1,35 +1,46 @@
 package middleware
 
-// import (
-// 	"context"
-// 	config "go-banking/config"
-// 	"net/http"
-// 	"strings"
-// )
+import (
+	"context"
+	"net/http"
+	"strings"
 
-// // AuthMiddleware untuk validasi JWT
-// func AuthMiddleware(next http.Handler) http.Handler {
-// 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-// 		tokenString := r.Header.Get("Authorization")
-// 		if tokenString == "" {
-// 			http.Error(w, "Authorization header missing", http.StatusUnauthorized)
-// 			return
-// 		}
+	config "github.com/fatimahaero/go-banking-auth/config"
+)
 
-// 		// remove "Bearer " prefix
-// 		tokenString = strings.TrimPrefix(tokenString, "Bearer ")
+// Mendefinisikan tipe kunci yang aman untuk context
+type contextKey string
 
-// 		claims, err := config.ParseToken(tokenString)
-// 		if err != nil {
-// 			http.Error(w, "Invalid token: "+err.Error(), http.StatusUnauthorized)
-// 			return
-// 		}
+const (
+	// Kunci yang digunakan untuk context
+	userIDKey   contextKey = "id"
+	usernameKey contextKey = "username"
+)
 
-// 		// get context from request then set data
-// 		ctx := r.Context()
-// 		ctx = context.WithValue(ctx, "id", claims.ID)
-// 		ctx = context.WithValue(ctx, "username", claims.Username)
+// AuthMiddleware untuk validasi JWT
+func AuthMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		tokenString := r.Header.Get("Authorization")
+		if tokenString == "" {
+			http.Error(w, "Authorization header missing", http.StatusUnauthorized)
+			return
+		}
 
-// 		next.ServeHTTP(w, r.WithContext(ctx))
-// 	})
-// }
+		// Hapus prefix "Bearer " dari token
+		tokenString = strings.TrimPrefix(tokenString, "Bearer ")
+
+		claims, err := config.ParseToken(tokenString)
+		if err != nil {
+			http.Error(w, "Invalid token: "+err.Error(), http.StatusUnauthorized)
+			return
+		}
+
+		// Ambil context dari request dan set data claims ke dalam context
+		ctx := r.Context()
+		ctx = context.WithValue(ctx, userIDKey, claims.ID)
+		ctx = context.WithValue(ctx, usernameKey, claims.Username)
+
+		// Lanjutkan dengan context yang sudah diperbarui
+		next.ServeHTTP(w, r.WithContext(ctx))
+	})
+}
