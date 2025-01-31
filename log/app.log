@@ -1,0 +1,22 @@
+{"level":"info","time":"2025-01-31T09:01:44+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T09:05:06+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T09:06:36+07:00","message":"Zerolog initiated successfully"}
+{"level":"error","error":"Config File \"config\" Not Found in \"[/home/dell/GoBootcamp/go-banking-auth/config]\"","time":"2025-01-31T09:06:36+07:00","message":"Failed to load config:"}
+{"level":"info","time":"2025-01-31T09:11:29+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T09:11:29+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T09:12:40+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T09:12:40+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T09:12:40+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T09:12:40+07:00","message":"Login successful"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T09:27:51+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T09:27:51+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T09:27:51+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T09:27:51+07:00","message":"Login successful"}
+{"level":"info","time":"2025-01-31T09:30:02+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T09:30:02+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T09:31:11+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T09:31:11+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T09:31:18+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T09:31:18+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T09:31:18+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T09:31:18+07:00","message":"Login successful"}
