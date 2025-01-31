@@ -20,3 +20,95 @@
 {"level":"info","username":"okyws","time":"2025-01-31T09:31:18+07:00","message":"Token generated successfully"}
 {"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T09:31:18+07:00","message":"Response Success sent successfully"}
 {"level":"info","username":"okyws","time":"2025-01-31T09:31:18+07:00","message":"Login successful"}
+{"level":"info","time":"2025-01-31T12:38:44+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T12:38:44+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T12:38:55+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T12:38:55+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T12:38:55+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T12:38:55+07:00","message":"Login successful"}
+{"level":"info","time":"2025-01-31T12:40:39+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T12:40:39+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T12:40:49+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T12:40:49+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T12:40:49+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T12:40:49+07:00","message":"Login successful"}
+{"level":"info","time":"2025-01-31T12:41:54+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T12:41:54+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T12:42:21+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T12:42:21+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T12:42:35+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T12:42:35+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T12:42:35+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T12:42:35+07:00","message":"Login successful"}
+{"level":"info","time":"2025-01-31T12:43:02+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T12:43:02+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T12:44:02+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T12:44:02+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T12:44:09+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T12:44:09+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T12:44:09+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T12:44:09+07:00","message":"Login successful"}
+{"level":"info","time":"2025-01-31T13:05:41+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T13:05:41+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T13:05:55+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T13:05:55+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T13:07:19+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T13:07:19+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T13:10:20+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T13:10:20+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T13:29:07+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T13:29:07+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T13:29:36+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T13:29:36+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:21:06+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:21:06+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:27:19+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:27:19+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:27:54+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:27:54+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:28:33+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:28:33+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:30:43+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:30:43+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:36:10+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:36:10+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:38:15+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:38:15+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T14:38:20+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T14:38:20+07:00","message":"Token generated successfully"}
+{"level":"error","error":"could not save token: could not save token: Error 1062 (23000): Duplicate entry 'ce7f953d-1fe0-4dcb-a7eb-ef4da5e1eb2c' for key 'refresh_token_store.PRIMARY'","time":"2025-01-31T14:38:20+07:00","message":"Username or password is incorrect. Failed to login"}
+{"level":"info","status":"error","code":401,"message":"could not save token: could not save token: Error 1062 (23000): Duplicate entry 'ce7f953d-1fe0-4dcb-a7eb-ef4da5e1eb2c' for key 'refresh_token_store.PRIMARY'","time":"2025-01-31T14:38:20+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-31T14:42:32+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:42:32+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:42:45+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:42:45+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:44:57+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:44:57+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:50:30+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:50:30+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T14:50:36+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T14:50:36+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T14:50:36+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T14:50:36+07:00","message":"Login successful"}
+{"level":"info","time":"2025-01-31T14:50:58+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:50:58+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T14:51:34+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T14:51:34+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T14:51:34+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T14:51:34+07:00","message":"Login successful"}
+{"level":"info","time":"2025-01-31T14:52:52+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:52:52+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:53:00+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:53:00+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T14:53:08+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T14:53:08+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T14:53:08+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T14:53:08+07:00","message":"Login successful"}
+{"level":"info","time":"2025-01-31T14:53:46+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:53:46+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-31T14:54:22+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-31T14:54:22+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/login","time":"2025-01-31T14:54:27+07:00","message":"Login"}
+{"level":"info","username":"okyws","time":"2025-01-31T14:54:27+07:00","message":"Token generated successfully"}
+{"level":"info","status":"success","code":200,"message":"Login successful","time":"2025-01-31T14:54:27+07:00","message":"Response Success sent successfully"}
+{"level":"info","username":"okyws","time":"2025-01-31T14:54:27+07:00","message":"Login successful"}

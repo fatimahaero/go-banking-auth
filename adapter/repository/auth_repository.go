@@ -1,6 +1,7 @@
 package adapter
 
 import (
+	"database/sql"
 	"fmt"
 
 	"github.com/fatimahaero/go-banking-auth/domain"
@@ -35,10 +36,30 @@ func (a *AuthRepositoryDB) GetAccountByUsername(username string) (*domain.Accoun
 }
 
 func (a *AuthRepositoryDB) SaveToken(accountID string, token string) error {
-	query := "INSERT INTO refresh_token_store (account_id, refresh_token) VALUES (?, ?)"
-	_, err := a.DB.Exec(query, accountID, token)
+	var existingToken string
+	querySelect := "SELECT refresh_token FROM refresh_token_store WHERE account_id = ?"
+
+	// Cek apakah refresh_token sudah ada
+	err := a.DB.Get(&existingToken, querySelect, accountID)
 	if err != nil {
-		return fmt.Errorf("could not save token: %v", err)
+		if err == sql.ErrNoRows {
+			// Jika tidak ada, lakukan INSERT
+			queryInsert := "INSERT INTO refresh_token_store (account_id, refresh_token) VALUES (?, ?)"
+			_, err = a.DB.Exec(queryInsert, accountID, token)
+			if err != nil {
+				return fmt.Errorf("failed to insert refresh token: %v", err)
+			}
+		} else {
+			// Jika ada error lain selain data tidak ditemukan
+			return fmt.Errorf("database error: %v", err)
+		}
+	} else {
+		// Jika refresh_token sudah ada, lakukan UPDATE
+		queryUpdate := "UPDATE refresh_token_store SET refresh_token = ? WHERE account_id = ?"
+		_, err = a.DB.Exec(queryUpdate, token, accountID)
+		if err != nil {
+			return fmt.Errorf("failed to update refresh token: %v", err)
+		}
 	}
 
 	return nil
