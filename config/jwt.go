@@ -19,8 +19,9 @@ type Claims struct {
 var jwtKey = []byte(os.Getenv("JWT_SECRET_KEY"))
 
 // Generate JWT Token
-func GenerateJWT(id, username string) (string, error) {
-	expirationTime := time.Now().Add(2 * time.Hour)
+func GenerateJWT(id, username string, expires_in_minutes int) (string, error) {
+	// Set token expiration time
+	expirationTime := time.Now().Add(time.Minute * time.Duration(expires_in_minutes))
 
 	claims := &Claims{
 		ID:       id,

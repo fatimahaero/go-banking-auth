@@ -28,6 +28,7 @@ func NewRouter(router *mux.Router, db *sqlx.DB) {
 	authHandler := hand.NewAuthHandlerDB(authService)
 
 	router.Handle("/login", http.HandlerFunc(authHandler.Login)).Methods("POST")
+	router.Handle("/refresh-token", http.HandlerFunc(authHandler.RefreshToken)).Methods("POST")
 }
 
 func StartServer() {

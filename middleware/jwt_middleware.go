@@ -2,26 +2,20 @@ package middleware
 
 import (
 	"context"
-	"database/sql"
-	"fmt"
 	"net/http"
 	"strings"
 
 	"github.com/fatimahaero/go-banking-auth/config"
-	"github.com/jmoiron/sqlx"
 )
 
-// Mendefinisikan tipe kunci yang aman untuk context
+// Context keys untuk menyimpan user ID dan username
 type contextKey string
 
-const (
-	// Kunci yang digunakan untuk context
-	userIDKey   contextKey = "id"
-	usernameKey contextKey = "username"
-)
+const userIDKey contextKey = "userID"
+const usernameKey contextKey = "username"
 
-// AuthMiddleware untuk validasi JWT
-func AuthMiddleware(next http.Handler, db *sqlx.DB) http.Handler {
+// AuthMiddleware untuk validasi JWT access token
+func AuthMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		tokenString := r.Header.Get("Authorization")
 		if tokenString == "" {
@@ -29,35 +23,21 @@ func AuthMiddleware(next http.Handler, db *sqlx.DB) http.Handler {
 			return
 		}
 
-		// Hapus prefix "Bearer " dari token
+		// Hapus prefix "Bearer "
 		tokenString = strings.TrimPrefix(tokenString, "Bearer ")
 
-		// Periksa apakah token ada dalam database
-		var accountID string
-		query := "SELECT account_id FROM refresh_token_store WHERE refresh_token = ?"
-
-		err := db.Get(&accountID, query, tokenString)
-		if err != nil {
-			if err == sql.ErrNoRows {
-				http.Error(w, "Invalid token", http.StatusUnauthorized)
-			} else {
-				http.Error(w, fmt.Sprintf("Database error: %v", err), http.StatusInternalServerError)
-			}
-			return
-		}
-
+		// Parse access token
 		claims, err := config.ParseToken(tokenString)
 		if err != nil {
-			http.Error(w, "Invalid token: "+err.Error(), http.StatusUnauthorized)
+			http.Error(w, "Invalid access token: "+err.Error(), http.StatusUnauthorized)
 			return
 		}
 
-		// Ambil context dari request dan set data claims ke dalam context
-		ctx := r.Context()
-		ctx = context.WithValue(ctx, userIDKey, claims.ID)
+		// Set data user di context
+		ctx := context.WithValue(r.Context(), userIDKey, claims.ID)
 		ctx = context.WithValue(ctx, usernameKey, claims.Username)
 
-		// Lanjutkan dengan context yang sudah diperbarui
+		// Lanjutkan request dengan context yang diperbarui
 		next.ServeHTTP(w, r.WithContext(ctx))
 	})
 }
